@@ -1,74 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TGR Top Up Shop</title>
+<title>TGR TOP UP SHOP</title>
 <style>
 *{box-sizing:border-box}
-body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#0b1020;
- color:white;
-}
-header{
- background:#151e35;
- padding:20px;
- text-align:center;
- border-bottom:2px solid #6c63ff;
-}
-header h1{color:#a99cff;margin:0}
-header p{color:#ccc}
-.hero{
- text-align:center;
- padding:45px 15px;
- background:linear-gradient(135deg,#24165c,#101d3b);
-}
-.hero h2{font-size:30px;color:#fff}
-.hero p{color:#ddd}
+body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:white}
+header,footer{background:#151e35;text-align:center;padding:22px}
+header{border-bottom:2px solid #6c63ff}
+h1{color:#a99cff}
+.hero{text-align:center;padding:35px 15px;background:linear-gradient(135deg,#24165c,#101d3b)}
 .container{padding:20px;max-width:850px;margin:auto}
-h2.section{text-align:center;color:#a99cff}
-.packages{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:15px;
-}
-.card{
- background:#19243e;
- padding:20px 10px;
- text-align:center;
- border:1px solid #46558a;
- border-radius:12px;
-}
+.section{text-align:center;color:#a99cff}
+.packages{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.card,.info,.payment{background:#19243e;padding:18px;text-align:center;border:1px solid #46558a;border-radius:12px;margin-bottom:15px}
 .card h3{color:#c1b5ff}
 .price{font-size:20px;color:#39e6a0}
-button{
- background:#6c63ff;
- color:white;
- border:0;
- border-radius:8px;
- padding:12px 20px;
- font-size:15px;
-}
-.info{
- background:#19243e;
- padding:20px;
- margin-top:25px;
- border-radius:12px;
- text-align:center;
-}
-footer{
- text-align:center;
- padding:25px;
- color:#aaa;
- margin-top:30px;
- background:#151e35;
-}
-@media(max-width:400px){
- .packages{grid-template-columns:1fr}
-}
+button{background:#6c63ff;color:white;border:0;border-radius:8px;padding:11px 16px;font-size:15px}
+.payment h3{color:#39e6a0}
+.number{font-size:21px;font-weight:bold;letter-spacing:1px}
+footer{color:#aaa;margin-top:25px}
+@media(max-width:400px){.packages{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -80,61 +33,67 @@ footer{
 
 <section class="hero">
 <h2>Welcome to TGR Top Up Shop</h2>
-<p>আপনার পছন্দের Diamond Package দেখুন</p>
+<p>আপনার পছন্দের Diamond Package বেছে নিন</p>
 </section>
 
 <div class="container">
 <h2 class="section">💎 Diamond Packages</h2>
 
 <div class="packages">
-<div class="card">
-<h3>25 Diamonds</h3>
-<p class="price">৳ Price TBD</p>
-<button>Coming Soon</button>
+<div class="card"><h3>25 Diamonds</h3><p class="price">৳ Price TBD</p></div>
+<div class="card"><h3>50 Diamonds</h3><p class="price">৳ Price TBD</p></div>
+<div class="card"><h3>115 Diamonds</h3><p class="price">৳ Price TBD</p></div>
+<div class="card"><h3>240 Diamonds</h3><p class="price">৳ Price TBD</p></div>
+<div class="card"><h3>355 Diamonds</h3><p class="price">৳ Price TBD</p></div>
+<div class="card"><h3>610 Diamonds</h3><p class="price">৳ Price TBD</p></div>
 </div>
 
-<div class="card">
-<h3>50 Diamonds</h3>
-<p class="price">৳ Price TBD</p>
-<button>Coming Soon</button>
+<h2 class="section">💳 Payment Methods</h2>
+
+<div class="payment">
+<h3>বিকাশ (bKash)</h3>
+<p class="number">01783190879</p>
+<button onclick="copyNumber('01783190879')">নম্বর কপি করুন</button>
 </div>
 
-<div class="card">
-<h3>115 Diamonds</h3>
-<p class="price">৳ Price TBD</p>
-<button>Coming Soon</button>
+<div class="payment">
+<h3>নগদ (Nagad)</h3>
+<p class="number">01776255065</p>
+<button onclick="copyNumber('01776255065')">নম্বর কপি করুন</button>
 </div>
 
-<div class="card">
-<h3>240 Diamonds</h3>
-<p class="price">৳ Price TBD</p>
-<button>Coming Soon</button>
-</div>
-
-<div class="card">
-<h3>355 Diamonds</h3>
-<p class="price">৳ Price TBD</p>
-<button>Coming Soon</button>
-</div>
-
-<div class="card">
-<h3>610 Diamonds</h3>
-<p class="price">৳ Price TBD</p>
-<button>Coming Soon</button>
-</div>
+<div class="info">
+<h2>📌 পেমেন্ট করার নিয়ম</h2>
+<p>১. আপনার পছন্দের Diamond Package বেছে নিন।</p>
+<p>২. উপরের বিকাশ অথবা নগদ নম্বরে টাকা পাঠান।</p>
+<p>৩. Transaction ID সংরক্ষণ করুন।</p>
+<p>৪. অর্ডার নিশ্চিত করতে দোকানের সাথে যোগাযোগ করুন।</p>
+<p>পেমেন্ট যাচাই করে অর্ডার সম্পন্ন করা হবে।</p>
 </div>
 
 <div class="info">
 <h2>📞 Contact Us</h2>
-<p>TGR Top Up Shop</p>
-<p>Order service coming soon!</p>
+<p>TGR TOP UP SHOP</p>
+<p>ধন্যবাদ আমাদের সাথে থাকার জন্য ❤️</p>
 </div>
 </div>
 
 <footer>
-<p>© 2026 TGR Top Up Shop</p>
+<p>© 2026 TGR TOP UP SHOP</p>
 <p>All Rights Reserved</p>
 </footer>
+
+<script>
+function copyNumber(number){
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(number)
+      .then(()=>alert("নম্বর কপি হয়েছে: "+number))
+      .catch(()=>alert("নম্বরটি হাতে কপি করুন: "+number));
+  }else{
+    alert("নম্বরটি কপি করুন: "+number);
+  }
+}
+</script>
 
 </body>
 </html>
