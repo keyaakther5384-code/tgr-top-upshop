@@ -362,4 +362,142 @@ window.open("https://wa.me/8801783190879?text="+encodeURIComponent(message),"_bl
 }
 </script>
 </body>
+</html><!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TGR TOP UP SHOP</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#0b1020;color:white}
+header,footer{background:#151e35;text-align:center;padding:20px}
+header{border-bottom:2px solid #6c63ff}
+h1{color:#a99cff}
+.hero{text-align:center;padding:30px;background:linear-gradient(135deg,#24165c,#101d3b)}
+.container{padding:20px;max-width:850px;margin:auto}
+.section{text-align:center;color:#a99cff}
+.packages{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.card,.info,.payment{background:#19243e;padding:18px;text-align:center;border:1px solid #46558a;border-radius:12px;margin-bottom:15px}
+.card h3{color:#c1b5ff}
+.price{color:#39e6a0;font-size:22px;font-weight:bold}
+form{background:#19243e;padding:20px;border-radius:12px}
+input,select{width:100%;padding:13px;margin:8px 0 16px;border-radius:7px;font-size:16px}
+button{background:#16a34a;color:white;border:0;border-radius:8px;padding:13px;width:100%;font-size:16px}
+.payment h3{color:#39e6a0}
+.number{font-size:21px;font-weight:bold}
+#notice{color:#39e6a0;text-align:center;font-weight:bold}
+@media(max-width:400px){.packages{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>💎 TGR TOP UP SHOP</h1>
+<p>Free Fire Diamond Top Up</p>
+</header>
+
+<section class="hero">
+<h2>Welcome to TGR Top Up Shop</h2>
+<p>আপনার পছন্দের Diamond Package বেছে নিন</p>
+</section>
+
+<div class="container">
+<h2 class="section">💎 Diamond Packages</h2>
+
+<div class="packages">
+<div class="card"><h3>25 Diamonds</h3><p class="price">৳10</p></div>
+<div class="card"><h3>50 Diamonds</h3><p class="price">৳30</p></div>
+<div class="card"><h3>115 Diamonds</h3><p class="price">৳85</p></div>
+<div class="card"><h3>240 Diamonds</h3><p class="price">৳165</p></div>
+<div class="card"><h3>355 Diamonds</h3><p class="price">৳220</p></div>
+<div class="card"><h3>610 Diamonds</h3><p class="price">৳410</p></div>
+</div>
+
+<h2 class="section">🛒 অর্ডার করুন</h2>
+
+<form onsubmit="sendOrder(event)">
+<label>আপনার নাম</label>
+<input id="name" required placeholder="আপনার নাম">
+
+<label>Free Fire UID</label>
+<input id="uid" required placeholder="আপনার UID">
+
+<label>Diamond Package</label>
+<select id="package" required>
+<option value="">প্যাকেজ বেছে নিন</option>
+<option>25 Diamonds - ৳10</option>
+<option>50 Diamonds - ৳30</option>
+<option>115 Diamonds - ৳85</option>
+<option>240 Diamonds - ৳165</option>
+<option>355 Diamonds - ৳220</option>
+<option>610 Diamonds - ৳410</option>
+</select>
+
+<label>পেমেন্ট মাধ্যম</label>
+<select id="payment" required>
+<option value="">পেমেন্ট মাধ্যম</option>
+<option>bKash</option>
+<option>Nagad</option>
+</select>
+
+<label>Transaction ID</label>
+<input id="trx" required placeholder="Transaction ID">
+
+<button type="submit">WhatsApp-এ অর্ডার করুন</button>
+<p id="notice"></p>
+</form>
+
+<h2 class="section">💳 Payment Methods</h2>
+<div class="payment">
+<h3>বিকাশ (bKash)</h3>
+<p class="number">01783190879</p>
+</div>
+<div class="payment">
+<h3>নগদ (Nagad)</h3>
+<p class="number">01776255065</p>
+</div>
+
+<div class="info">
+<h2>📌 অর্ডারের নিয়ম</h2>
+<p>১. প্যাকেজ বেছে নিন।</p>
+<p>২. টাকা পাঠিয়ে Transaction ID দিন।</p>
+<p>৩. WhatsApp-এ অর্ডার পাঠান।</p>
+<p>৪. পেমেন্ট যাচাইয়ের পর অর্ডার নিশ্চিত হবে।</p>
+</div>
+</div>
+
+<footer>
+<p>© 2026 TGR TOP UP SHOP</p>
+<p>All Rights Reserved</p>
+</footer>
+
+<script>
+function sendOrder(event){
+event.preventDefault();
+
+const name=document.getElementById("name").value.trim();
+const uid=document.getElementById("uid").value.trim();
+const pack=document.getElementById("package").value;
+const payment=document.getElementById("payment").value;
+const trx=document.getElementById("trx").value.trim();
+
+const message=
+"নতুন TGR TOP UP SHOP অর্ডার\n"+
+"নাম: "+name+"\n"+
+"Free Fire UID: "+uid+"\n"+
+"Package: "+pack+"\n"+
+"Payment: "+payment+"\n"+
+"Transaction ID: "+trx;
+
+document.getElementById("notice").textContent=
+"WhatsApp খুললে মেসেজটি পাঠাতে Send চাপুন।";
+
+window.open(
+"https://wa.me/8801783190879?text="+encodeURIComponent(message),
+"_blank"
+);
+}
+</script>
+</body>
 </html>
